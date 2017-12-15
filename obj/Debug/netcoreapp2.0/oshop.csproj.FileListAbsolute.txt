@@ -1,0 +1,10 @@
+E:\_git\oshop\bin\Debug\netcoreapp2.0\oshop.deps.json
+E:\_git\oshop\bin\Debug\netcoreapp2.0\oshop.runtimeconfig.json
+E:\_git\oshop\bin\Debug\netcoreapp2.0\oshop.runtimeconfig.dev.json
+E:\_git\oshop\bin\Debug\netcoreapp2.0\oshop.dll
+E:\_git\oshop\bin\Debug\netcoreapp2.0\oshop.pdb
+E:\_git\oshop\obj\Debug\netcoreapp2.0\oshop.csproj.CoreCompileInputs.cache
+E:\_git\oshop\obj\Debug\netcoreapp2.0\oshop.AssemblyInfoInputs.cache
+E:\_git\oshop\obj\Debug\netcoreapp2.0\oshop.AssemblyInfo.cs
+E:\_git\oshop\obj\Debug\netcoreapp2.0\oshop.dll
+E:\_git\oshop\obj\Debug\netcoreapp2.0\oshop.pdb

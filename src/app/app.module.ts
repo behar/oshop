@@ -1,3 +1,4 @@
+import { AuthService } from './services/auth.service';
 import { LoginComponent } from './login/login.component';
 import { environment } from '../environments/environment';
 import { BrowserModule } from '@angular/platform-browser';
@@ -19,6 +20,7 @@ import { OrderSuccessComponent } from './order-success/order-success.component';
 import { MyOrdersComponent } from './my-orders/my-orders.component';
 import { AdminProductsComponent } from './admin/admin-products/admin-products.component';
 import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.component';
+import { CallbackComponent } from './callback/callback.component';
 
 
 
@@ -34,7 +36,8 @@ import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.componen
     MyOrdersComponent,
     AdminProductsComponent,
     AdminOrdersComponent,
-    LoginComponent
+    LoginComponent,
+    CallbackComponent
   ],
   imports: [
     BrowserModule,
@@ -43,19 +46,27 @@ import { AdminOrdersComponent } from './admin/admin-orders/admin-orders.componen
     AngularFireAuthModule,
     NgbModule.forRoot(),
     RouterModule.forRoot([
-      {path: '', component:HomeComponent},
-      {path: 'products', component:ProductsComponent},
+      {path: '', component: HomeComponent},
+      {path: 'products', component: ProductsComponent},
       {path: 'shopping-cart', component: ShoppingCartComponent},
-      {path: 'check-out', component:CheckOutComponent},
-      {path: 'order-success', component:OrderSuccessComponent},
-      {path: 'login', component:LoginComponent},
-      {path: 'admin/products', component:AdminProductsComponent},
-      {path: 'admin/orders', component:AdminOrdersComponent}
+      {path: 'check-out', component: CheckOutComponent},
+      {path: 'order-success', component: OrderSuccessComponent},
+      {path: 'my/orders', component: MyOrdersComponent},
+      {path: 'login', component: LoginComponent},
+      {path: 'admin/products', component: AdminProductsComponent},
+      {path: 'admin/orders', component: AdminOrdersComponent},
+      {path: 'callback', component: CallbackComponent}
     ])
 
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent],
   exports: [NavbarComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+  constructor(private auth: AuthService) {
+    auth.handleAuth();
+
+  }
+}
